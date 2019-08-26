@@ -1,0 +1,16 @@
+language: java
+install: true
+
+jdk:
+  - openjdk11
+  
+before_install:
+  - chmod +x gradlew
+
+script:
+- ./gradlew cleanTest test jacocoTestReport cucumber
+- sonar-scanner
+
+addons:
+  sonarcloud:
+    organization: "wtjerry-github"

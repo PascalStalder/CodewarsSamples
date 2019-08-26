@@ -1,10 +1,12 @@
 package com.company;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ShortestStringTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetShortestWordLengthWithEmptyInputArray() {
         ShortestString testee = new ShortestString(" ");
 
@@ -12,14 +14,14 @@ class ShortestStringTest {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetShortestWordLengthWithOneWord() {
         ShortestString testee = new ShortestString("test");
 
         assertEquals(4, testee.getShortestWordLength());
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void testGetShortestWordLengthWithThreeWords() {
         ShortestString testee = new ShortestString("test new clearing");
 
