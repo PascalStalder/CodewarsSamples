@@ -2,7 +2,8 @@ package com.company;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class ShortestStringTest {
 
@@ -26,6 +27,12 @@ class ShortestStringTest {
         ShortestString testee = new ShortestString("test new clearing");
 
         assertEquals(3, testee.getShortestWordLength());
+    }
+
+    @Test
+    void testGetShortestWordLengthWithNull(){
+        ShortestString testee = new ShortestString(null);
+        assertThrows(NullPointerException.class, testee::getShortestWordLength);
     }
 
 
