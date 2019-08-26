@@ -3,7 +3,7 @@ install: true
 
 jdk:
   - openjdk11
-  
+
 before_install:
   - chmod +x gradlew
 
@@ -13,4 +13,6 @@ script:
 
 addons:
   sonarcloud:
-    organization: "wtjerry-github"
+    organization: "pascalstalder-github"
+    token:
+      secure: d24356e7d015dbc7a978f933c6277982b20685a1
