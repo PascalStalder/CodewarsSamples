@@ -11,12 +11,11 @@ public class ShortestString {
     public int getShortestWordLength(){
         String[] wordArray = words.split(" ");
         int lengthShortestWord = 0;
-        for (String word :
-                wordArray) {
+        for (String word : wordArray) {
             if(lengthShortestWord == 0) {
                 lengthShortestWord = word.length();
             }else{
-                lengthShortestWord = (lengthShortestWord > word.length()) ? word.length() : lengthShortestWord;
+                lengthShortestWord = Math.min(lengthShortestWord, word.length());
             }
 
         }
